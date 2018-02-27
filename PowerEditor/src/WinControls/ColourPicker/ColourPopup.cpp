@@ -158,7 +158,7 @@ INT_PTR CALLBACK ColourPopup::run_dlgProc(UINT message, WPARAM wParam, LPARAM lP
 						LineTo(hdc, rc.left, rc.bottom);
 						SelectObject(hdc, holdPen);
 						DeleteObject(hpen);
-						// Draw the lighted side.
+						// create a brush
 						HPEN hbrush = CreatePen(PS_SOLID, 1, GetSysColor(COLOR_BTNSHADOW));
 						holdPen = (HPEN)SelectObject(hdc, hbrush);
 						MoveToEx(hdc, rc.left, rc.bottom, NULL);
