@@ -165,7 +165,9 @@ INT_PTR CALLBACK ColourPopup::run_dlgProc(UINT message, WPARAM wParam, LPARAM lP
 						LineTo(hdc, rc.left, rc.top);
 						LineTo(hdc, rc.right, rc.top);
 						SelectObject(hdc, holdPen);
-						DeleteObject(hbrush);
+						if (hbrush) {
+							DeleteObject(hbrush);
+						}
 					}
 					else 
 					{
