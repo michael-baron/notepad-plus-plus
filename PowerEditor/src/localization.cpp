@@ -301,10 +301,11 @@ void NativeLangSpeaker::changeMenuLang(HMENU menuHandle, generic_string & plugin
 		}
 	}
 
+
 	TiXmlNodeA *menuCommandsRoot = mainMenu->FirstChild("Commands");
 	for (TiXmlNodeA *childNode = menuCommandsRoot->FirstChildElement("Item");
-		childNode ;
-		childNode = childNode->NextSibling("Item") )
+		childNode;
+		childNode = childNode->NextSibling("Item"))
 	{
 		TiXmlElementA *element = childNode->ToElement();
 		int id;
@@ -314,7 +315,6 @@ void NativeLangSpeaker::changeMenuLang(HMENU menuHandle, generic_string & plugin
 		const wchar_t *nameW = wmc->char2wchar(name, _nativeLangEncoding);
 		::ModifyMenu(menuHandle, id, MF_BYCOMMAND, id, nameW);
 	}
-
 	TiXmlNodeA *subEntriesRoot = mainMenu->FirstChild("SubEntries");
 
 	for (TiXmlNodeA *childNode = subEntriesRoot->FirstChildElement("Item");
