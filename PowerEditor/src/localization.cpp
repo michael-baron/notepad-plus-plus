@@ -321,7 +321,7 @@ void NativeLangSpeaker::changeMenuLang(HMENU menuHandle, generic_string & plugin
 		childNode ;
 		childNode = childNode->NextSibling("Item") )
 	{
-		TiXmlElementA* element = childNode->ToElement();
+		TiXmlElementA* element = childNode->ToElement(); 
 		//const char *xStr = element->Attribute("posX", &x);
 		//const char *yStr = element->Attribute("posY", &y);
 		const char* subMenuIdStr = element->Attribute("subMenuId");
