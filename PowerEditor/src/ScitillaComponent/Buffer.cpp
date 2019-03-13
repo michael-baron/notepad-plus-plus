@@ -340,8 +340,9 @@ generic_string Buffer::getFileTime(fileTimeType ftt) const
 			tm *timeinfo = localtime(&rawtime);
 			const int temBufLen = 64;
 			TCHAR tmpbuf[temBufLen];
-
-			generic_strftime(tmpbuf, temBufLen, TEXT("%Y-%m-%d %H:%M:%S"), timeinfo);
+			if (timeinfo) {
+				generic_strftime(tmpbuf, temBufLen, TEXT("%Y-%m-%d %H:%M:%S"), timeinfo);
+			}
 			return tmpbuf;
 		}
 	}
