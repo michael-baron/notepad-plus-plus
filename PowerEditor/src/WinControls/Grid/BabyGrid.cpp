@@ -538,7 +538,9 @@ void DisplayColumn(HWND hWnd,int SI,int c,int offset,HFONT hfont,HFONT hcolumnhe
 		  Rectangle(gdc,rect.left,rect.top,rect.right,rect.bottom);
 		  SelectObject(gdc,holdbrush);
 		  SelectObject(gdc,holdpen);
-		  DeleteObject(hbrush);
+		  if (hbrush) {
+			  DeleteObject(hbrush);
+		  }
 		  DeleteObject(hpen);
 		 }
 
