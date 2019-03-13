@@ -543,6 +543,7 @@ void DisplayColumn(HWND hWnd,int SI,int c,int offset,HFONT hfont,HFONT hcolumnhe
 		 }
 
 		 
+		 
 		 rect.right -= 2;
 		 rect.left += 2;
 
