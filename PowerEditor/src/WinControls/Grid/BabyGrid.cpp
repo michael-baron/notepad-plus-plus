@@ -540,6 +540,7 @@ void DisplayColumn(HWND hWnd,int SI,int c,int offset,HFONT hfont,HFONT hcolumnhe
 		  SelectObject(gdc,holdpen);
 		  DeleteObject(hbrush);
 		  DeleteObject(hpen);
+		  
 		 }
 		 rect.right -= 2;
 		 rect.left += 2;
